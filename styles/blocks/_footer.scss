@@ -1,0 +1,136 @@
+.footer {
+	padding: 50px 0;
+	background: $dark-blue2;
+	color: $white;
+	@include desktop-large {
+		padding: 65px 0;
+	}
+}
+
+.footer__wrapper{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.footer .header__link-logo {
+	margin: 0;
+}
+
+.footer .header__link-logo img {
+  width: 154px;
+	@include desktop-large {
+		width: 170px;
+	}
+}
+
+.footer__item + .footer__item {
+	margin-top: 35px;
+	@include desktop-large {
+		margin: 0;
+	}
+}
+
+.footer__item:nth-child(1) {
+	width: 100%;
+	text-align: center;
+	@include desktop-large {
+		width: 19%;
+		text-align: left;
+	}
+}
+
+.footer__item:nth-child(2) {
+	width: 660px;
+	max-width: 500px;
+	margin-left: auto;
+  margin-right: auto;
+	@include desktop-large {
+		margin: 0;
+		max-width: none;
+	}
+}
+
+.footer__item:nth-child(3) {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 600px;
+	max-width: 500px;
+	margin-left: auto;
+  margin-right: auto;
+	@include desktop-large {
+		justify-content: space-between;
+    flex: 1;
+    width: auto;
+    max-width: none;
+	}
+}
+
+.footer__item .menu__list {
+	height: 140px;
+	flex-wrap: wrap;
+	@include from-desktop {
+		flex-direction: column;
+    align-items: flex-start;
+	}
+	@include desktop-large {
+		height: 115px;
+	}
+}
+
+.footer__item .menu__item {
+	padding: 0;
+	margin-bottom: 18px;
+	font-family: $family-text;
+	font-weight: 500;
+	font-size: $text-medium-mini;
+	line-height: 140%;
+	color: #FFFFFF;
+	line-height: 130%;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	text-transform: initial;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.footer__item .menu__item:hover {
+	color: $gold;
+}
+
+.footer__item .menu__item:nth-child(3),
+.footer__item .menu__item:nth-child(6) {
+	margin-bottom: 0;
+}
+
+.footer__item .header__contacts-item {
+	margin: 0 0 20px;
+	font-size: $text-small;
+}
+
+.footer__item .btn-clear {
+	padding: 18px 18px;
+	font-size: $text-small;
+	color: #fff;
+	background: transparent;
+	border-color: #fff;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.footer__item-left > .header__contacts-item + .header__contacts-item {
+	@include desktop-large {
+		margin: 20px 0 0;
+	}
+}
+
+.btn-clear:hover {
+	color: $blue;
+	background: $light-white;
+	border-color: $blue;
+}

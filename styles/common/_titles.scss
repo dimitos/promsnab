@@ -1,0 +1,57 @@
+.title-1 {
+  font-family: $family-title-1;
+  font-size: $text-huge;
+  line-height: 140%;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  @include from-tablet {
+    font-size: $text-giant;
+  }
+}
+
+.title-2 {
+  font-family: $family-title-1;
+  font-size: $text-large-medium;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  color: $dark-blue;
+  text-align: center;
+  text-transform: uppercase;
+  @include from-tablet {
+    font-size: $text-large;
+  }
+  @include desktop-large {
+    font-size: $text-huge;
+  }
+}
+
+.title-3 {
+  font-family: $family-title-2;
+  font-size: $text-large-mini;
+  font-weight: 900;
+  @include desktop-large {
+    font-size: $text-large;
+  }
+}
+
+.title-4 {
+  font-family: $family-title-2;
+  font-size: $text-small;
+  font-weight: 700;
+  @include from-tablet {
+    font-size: $text-medium-mini;
+  }
+  @include from-desktop {
+    font-size: $text-medium;
+  }
+  @include desktop-large {
+    font-size: $text-medium-maxi;
+  }
+}
+
+@include desktop-large {
+  .section-text {
+    font-size: $text-medium-maxi;
+  }
+}

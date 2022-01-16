@@ -1,0 +1,177 @@
+.product {
+  position: relative;
+  padding: 50px 0 65px;
+  @include from-tablet {
+    padding: 50px 0 90px;
+  }
+  @include desktop-large {
+    padding: 50px 0 115px;
+  }
+}
+
+.product-slider {
+  margin-top: 30px;
+  @include from-tablet {
+    margin-top: 65px;
+  }
+}
+
+.product-slider .slick-track {
+  display: flex;
+}
+
+.product-slider .slick-list {
+  margin: 0 -5px;
+  @include from-desktop {
+    margin: 0 -20px;
+  }
+}
+
+.product__item {
+  height: 520px;
+  padding: 0 5px;
+  @include from-tablet {
+    height: 640px;
+  }
+  @include from-desktop {
+    height: 715px;
+    padding: 0 20px;
+  }
+}
+
+.product__item-wr {
+  position: relative;
+  z-index: 0;
+  height: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 38px 43px 54px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  border-radius: $border-radius;
+  @include from-desktop {
+    background-size: auto;
+  }
+}
+
+.product__item-1 {
+  background-image: url(/img/prod-1.jpg);
+}
+
+.product__item-2 {
+  background-image: url(/img/prod-2.jpg);
+}
+
+.product__item-3 {
+  background-image: url(/img/prod-3.jpg);
+}
+
+.product__item-wr::before {
+  position: absolute;
+  content: '';
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #2048d1 42.38%, rgba(32, 72, 209, 0) 82.02%);
+}
+
+.product__item-title {
+  margin-bottom: 24px;
+  color: $white;
+}
+
+.product__item-text {
+  color: $white;
+  font-size: $text-medium-small;
+  line-height: 140%;
+  @include desktop-large {
+    font-size: $text-medium-mini;
+  }
+}
+
+.product__item-button {
+  position: absolute;
+  z-index: 1;
+  bottom: 54px;
+  left: 50%;
+  white-space: nowrap;
+  transform: translateX(-50%);
+}
+
+.product__container {
+  position: relative;
+  z-index: 0;
+}
+
+.product__container::before {
+  position: absolute;
+  content: '';
+  z-index: -1;
+  bottom: -120px;
+  left: 25px;
+  width: 150px;
+  height: 132px;
+  background-image: url(/img/hat-1-500.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @include from-tablet {
+    background-image: url(/img/hat-1-768.png);
+    bottom: -174px;
+    left: 48px;
+    width: 250px;
+    height: 220px;
+  }
+  @include from-desktop {
+    background-image: url(/img/hat-1-1140.png);
+    bottom: -200px;
+    left: 61px;
+    width: 285px;
+    height: 252px;
+  }
+  @include desktop-large {
+    background-image: url(/img/hat-1-1600.png);
+    bottom: -250px;
+    left: -100px;
+    width: 425px;
+    height: 376px;
+  }
+}
+
+.product .slider-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.product .slick-dots {
+  display: flex;
+  align-items: center;
+  & li + li {
+    margin-left: 18px;
+  }
+  & button {
+    width: 16px;
+    height: 16px;
+    font-size: 0;
+    color: transparent;
+    background: $dark-blue2;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    &:hover {
+      background: $blue;
+    }
+  }
+  & .slick-active button {
+    background: $gold-light;
+  }
+}
+
+.product .slick-dots li:only-child {
+  display: none;
+}

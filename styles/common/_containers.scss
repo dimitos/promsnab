@@ -1,0 +1,18 @@
+.container {
+    margin-left: $html-mobile-edge-offset;
+    margin-right: $html-mobile-edge-offset;
+
+    @include from-desktop {
+        width: $container-desktop-width;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @include desktop-large {
+        width: $container-desktop-large-width;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}

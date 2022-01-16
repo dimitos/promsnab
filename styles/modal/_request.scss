@@ -1,0 +1,108 @@
+.request {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    text-align: left;
+}
+.request__heading {
+    width: 100%;
+    margin-bottom: 24px;
+
+    color: $dark-blue;
+    font-family: $family-title-2;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 28px;
+
+    @include to-desktop {
+        padding-right: 32px;
+    }
+
+    @include from-desktop {
+        font-weight: 900;
+        font-size: 36px;
+        line-height: 50px;
+        margin-bottom: 40px;
+    }
+}
+.request__form {
+    width: 265px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    @include from-desktop {
+        width: 590px;
+    }
+}
+.request__fields {
+    display: grid;
+    grid-gap: 24px;
+    margin-bottom: 24px;
+}
+.request__input {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid $dark-blue;
+
+    &:focus {
+        outline-color: $gold;
+    }
+
+    @include from-desktop {
+        padding: 16px 24px;
+        font-size: 24px;
+        line-height: 34px;
+    }
+}
+.request__conditions {
+    display: grid;
+    grid-gap: 8px;
+    margin-bottom: 32px;
+
+    @include from-desktop {
+        grid-gap: 16px;
+        margin-bottom: 56px;
+    }
+}
+.request__condition {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.request__text {
+    color: $dark-blue;
+
+    &-condition {
+        font-size: 12px;
+        line-height: 1.5;
+
+        @include from-desktop {
+            font-size: 24px;
+        }
+    }
+}
+.request__link {
+    text-decoration: underline;
+}
+.request__checkbox {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    accent-color: $gold;
+    margin-right: 10px;
+}
+.request__submit {
+    @include to-desktop {
+        font-size: 18px;
+        padding: 16px;
+    }
+
+    @include from-desktop {
+        align-self: center;
+    }
+}

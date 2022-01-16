@@ -1,0 +1,100 @@
+.contact {
+  position: relative;
+  padding: 65px 0 65px;
+  @include from-tablet {
+    padding: 65px 0 80px;
+  }
+  @include desktop-large {
+    padding: 65px 0 95px;
+  }
+}
+
+.contact__inner {
+  position: relative;
+  z-index: 1;
+  margin-top: 40px;
+}
+
+.contact__wr {
+  max-width: 390px;
+  padding: 38px;
+  margin: 0 auto 38px;
+  font-family: $family-text;
+  font-size: $text-medium-mini;
+  line-height: 145%;
+  color: $dark-blue;
+  background: $white;
+  border-radius: $border-radius;
+  @include from-desktop {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 15%;
+    transform: translate(0, -50%);
+    max-width: 485px;
+    padding: 40px 48px;
+  }
+}
+
+.contact__address {
+  margin-bottom: 27px;
+}
+
+.contact__txt {
+  margin-bottom: 14px;
+}
+
+.contact__link {
+  position: relative;
+  display: block;
+  padding-left: 60px;
+  margin-bottom: 38px;
+  font-family: $family-title-2;
+  font-weight: bold;
+  font-size: $text-large-mini;
+  line-height: 40px;
+  transition: all 0.3s ease;
+}
+
+.contact__link::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background: url(/img/svg/icon-phone.svg) center / cover no-repeat;
+}
+
+.contact__link:hover {
+  color: $light-blue;
+}
+
+.contact .btn-blue {
+  padding: 17px 23px;
+  font-size: $text-medium;
+  @include from-desktop {
+    padding: 17px 54px;
+  }
+}
+
+.contact__map {
+  height: 315px;
+  @include from-tablet {
+    height: 450px;
+  }
+  @include from-desktop {
+    height: 590px;
+  }
+  @include desktop-large {
+    height: 720px;
+  }
+}
+
+#map {
+  height: 100%;
+}
+
+.contact__map-wr {
+  height: 100%;
+}

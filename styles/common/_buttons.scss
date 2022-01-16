@@ -1,0 +1,53 @@
+.btn {
+    display: inline-block;
+    font-family: $family-title-2;
+    border-radius: $border-radius;
+    border: 1px solid;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.btn-blue {
+    padding: 12px 38px;
+    font-size: $text-small;
+    color: $white;
+    background: $light-blue;
+    border-color: $light-blue;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    @include from-tablet {
+        padding: 18px 54px;
+        font-size: $text-medium;
+    }
+}
+
+.btn-blue:hover {
+    background: $dark-blue2;
+    border-color: $dark-blue2;
+}
+
+.btn-clear {
+    padding: 8px 14px;
+    font-size: $text-tiny;
+    color: $white;
+    background: $clear;
+    border-color: $white;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    @include desktop-large {
+        padding: 10px 18px;
+        font-size: $text-medium-mini;
+    }
+}
+
+.btn-clear:hover {
+    color: $blue;
+    background: $light-white;
+    border-color: $blue;
+}

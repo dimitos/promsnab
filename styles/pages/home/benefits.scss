@@ -1,0 +1,84 @@
+.benefits {
+  padding: 62px 0 22px;
+  @include from-tablet {
+    padding: 90px 0 40px;
+  }
+  @include from-desktop {
+    padding: 118px 0 62px;
+  }
+}
+
+.benefits__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  margin: 0 -10px;
+  @include desktop-large {
+    margin: 0 -20px;
+  }
+}
+
+.benefits__item {
+  max-width: 530px;
+  padding: 0 10px;
+  margin: 0 0 40px;
+  @include desktop-large {
+    max-width: none;
+    width: calc(100% / 3);
+    padding: 0 20px;
+  }
+}
+
+.benefits__item-wr {
+  display: flex;
+  height: 100%;
+  min-height: 150px;
+  background: #ffffff;
+  border-radius: $border-radius;
+}
+
+.benefits__item-left {
+  position: relative;
+  width: 112px;
+}
+
+.benefits__item-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.benefits__item-center {
+  display: flex;
+  align-items: center;
+  flex: 1 0;
+  padding: 24px 0;
+}
+
+.benefits__item-right {
+  position: relative;
+  width: 107px;
+  @include desktop-large {
+    width: 93px;
+  }
+}
+
+.benefits__item-num {
+  position: absolute;
+  right: 18px;
+  bottom: -1px;
+  font-family: $family-title-1;
+  font-size: 115px;
+  line-height: 76%;
+  font-weight: 900;
+  color: $gray-blue;
+  @include from-desktop {
+    right: 24px;
+  }
+  @include desktop-large {
+    font-size: 144px;
+    right: 12px;
+  }
+}

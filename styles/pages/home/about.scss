@@ -1,0 +1,157 @@
+.about {
+  padding: 50px 0;
+  @include from-desktop {
+    padding: 102px 0;
+  }
+}
+
+.about__title-wrap {
+  display: flex;
+  align-items: flex-end;
+  height: 206px;
+  @include from-tablet {
+    display: block;
+    height: auto;
+  }
+}
+
+.about__title {
+  max-width: 350px;
+  padding-bottom: 14px;
+  color: $blue;
+  text-align: left;
+  @include from-tablet {
+    max-width: none;
+    margin-top: auto;
+    padding-bottom: 25px;
+  }
+}
+
+.title-line {
+  position: relative;
+}
+
+.title-line:after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  width: 162px;
+  height: 1px;
+  background: $gold;
+  @include from-tablet {
+    width: 114px;
+  }
+}
+
+.about__item:first-child .about__title-wrap {
+  justify-content: flex-end;
+  right: 0;
+  @include from-tablet {
+    left: 0;
+  }
+}
+
+
+.about__item:first-child .title-line:after {
+  right: 0;
+  left: auto;
+  @include from-tablet {
+    left: 0;
+    right: auto;
+  }
+}
+
+.about__item {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 38px 18px;
+  background: $light-gray-blue;
+  border-radius: $border-radius;
+  @include from-tablet {
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+  }
+}
+
+.about__item + .about__item {
+  margin-top: 40px;
+  @include from-desktop {
+    margin-top: 102px;
+  }
+}
+
+.about__item:last-child {
+  flex-direction: row-reverse;
+}
+
+.about__item:last-child {
+  flex-direction: row-reverse;
+}
+
+.about__item-img{
+  height: 206px;
+  width: auto;
+  @include from-tablet {
+    height: auto;
+  }
+}
+
+.about__item:last-child .about__item-img {
+  @include from-tablet {
+    margin-right: -16px;
+  }
+  @include desktop-large {
+    margin-right: -20px;
+  }
+}
+
+.about__item-right {
+  z-index: 3;
+  width: 100%;
+  @include from-tablet {
+    padding: 30px;
+    background: $light-gray-blue;
+    border-radius: $border-radius;
+  }
+  @include desktop-large {
+    width: 68.7%;
+  }
+  @include from-desktop {
+    width: 60%;
+    padding: 53px 25px 53px 53px;
+  }
+}
+
+.about__item-left {
+  position: absolute;
+  top: 38px;
+  left: 18px;
+  z-index: 2;
+  width: auto;
+  @include from-tablet {
+    position: static;
+    width: 36%;
+    margin-right: 10px;
+    text-align: right;
+  }
+  @include desktop-large {
+    width: 30%;
+  }
+}
+
+.about__item:last-child .about__item-left {
+  left: auto;
+  right: 18px;
+  flex-direction: row-reverse;
+}
+
+.about__text {
+  margin-top: 25px;
+  @include from-desktop {
+    margin-top: 32px;
+  }
+}
